@@ -1,8 +1,14 @@
-import React from 'react'
 import styles from './alert.module.css';
 import clsx from 'clsx';
+import React from 'react';
 
-export default function Alert({ children, type }) {
+export default function Alert({
+  children,
+  type
+} : {
+  children: React.ReactNode
+  type: 'success' | 'error'
+}) {
   return (
     <div
       className={clsx({
